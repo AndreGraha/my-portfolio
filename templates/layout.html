@@ -28,15 +28,21 @@
             <div class="collapse navbar-collapse" id="navbarToggle">
               <!-- Left-aligned navigation links -->
               <div class="navbar-nav me-auto">
-                <a class="nav-item nav-link" href="/about">About Me</a>
                 <a class="nav-item nav-link" href="/projects">Projects</a>
               </div>
               <!-- Right-aligned navigation links with LinkedIn -->
               <div class="navbar-nav ms-auto">
+                <a class="nav-item nav-link" href="/about">About</a>
                 <a class="nav-item nav-link" href="/contact">Contact</a>
                 <a class="nav-item nav-link" href="https://www.linkedin.com/in/andre-graham-45bb30320/" target="_blank">
                   <img src="{{ url_for('static', filename='images/linkedin-logo.png') }}" alt="LinkedIn" style="width: 20px; height: 20px;">
                 </a>
+
+                <!-- GitHub Link with Icon -->
+                <a class="nav-item nav-link" href="https://github.com/AndreGraha" target="_blank">
+                   <img src="{{ url_for('static', filename='images/github-icon.png') }}" alt="GitHub" style="width: 20px; height: 20px;">
+                </a>
+
               </div>
             </div>
           </div>
@@ -55,6 +61,7 @@
     <footer class="bg-light text-center py-3 mt-4">
         <p>&copy; 2024 Andre Graham | Connect on 
             <a href="https://www.linkedin.com/in/andre-graham-45bb30320/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/AndreGraha" target="_blank">GitHub</a>
         </p>
     </footer>
 
