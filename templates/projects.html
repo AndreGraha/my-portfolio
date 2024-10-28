@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Projects</h1>
+        <p class="text-center">Explore some of the projects I’ve worked on, showcasing my expertise in data science, machine learning, and AI solutions development.</p>
+
+        <hr>
+
+        <!-- Heart Disease Prediction Project -->
+        <section id="heart-disease-prediction" class="my-5">
+            <div class="project-item">
+                <h2>Heart Disease Prediction</h2>
+                <p>This project predicts heart disease risk using various machine learning techniques, including Logistic Regression, Decision Tree, Random Forest, and Support Vector Machine models. It emphasizes my skills in data preprocessing, feature selection, and hyperparameter optimization using GridSearchCV.</p>
+                <a href="{{ url_for('predicting_heart_disease') }}" class="btn btn-primary">View Work</a>
+            </div>
+        </section>
+
+        <hr>
+        
+    </div>
+{% endblock %}

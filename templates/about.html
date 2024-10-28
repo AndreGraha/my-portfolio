@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container my-5">
+        <h1 class="text-center mb-4">About Me</h1>
+        <p class="text-center"> Learn more about my journey, skills, and passion for data science. This section covers my professional background, technical expertise, and the drive behind my projects. </p>
+        <hr>
+        <!-- Introduction Section -->
+        <section id="introduction" class="my-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Who Am I?</h2>
+                    <p>Hello! I'm Andre Graham, a passionate data scientist and AI enthusiast. My journey into the world of data began with a love for mathematics and problem-solving, leading me to pursue an academic path in Statistics and Economics. I thrive on challenges and enjoy applying my skills to real-world problems, especially in the realms of machine learning, data analysis, and predictive modeling.</p>
+                    <p>Currently, I'm focused on leveraging AI and data-driven insights to solve complex problems and create impactful solutions.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='images/profile_picture.jpeg') }}" alt="Profile Picture" class="img-fluid rounded">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Education Section -->
+        <section id="education" class="my-5">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>Graduate Certificate in A.I. Solutions Development</strong> - George Brown College
+                    <p>Currently completing a specialized program focused on artificial intelligence solutions development. This program covers machine learning, deep learning, natural language processing, and project deployment in the industry.</p>
+                </li>
+                <li>
+                    <strong>Bachelor of Science in Statistics and Economics</strong> - University of Toronto
+                    <p>Graduated with distinction, majoring in Statistics and Economics. The coursework provided a strong foundation in statistical analysis, econometrics, and data-driven decision-making. I developed a keen interest in predictive modeling and data visualization during my time here.</p>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Professional Experience Section -->
+        <section id="experience" class="my-5">
+            <h2>Professional Experience</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Data Science Intern - XYZ Company</h4>
+                    <p><em>May 2024 - August 2024</em></p>
+                    <ul>
+                        <li>Developed machine learning models to predict customer churn, increasing retention by 15%.</li>
+                        <li>Conducted exploratory data analysis (EDA) and feature engineering for various projects.</li>
+                        <li>Collaborated with the data engineering team to implement data pipelines using Python and SQL.</li>
+                    </ul>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <h4>Junior Data Analyst - ABC Inc.</h4>
+                    <p><em>June 2023 - December 2023</em></p>
+                    <ul>
+                        <li>Performed data analysis to support business decisions, identifying key insights for marketing campaigns.</li>
+                        <li>Built interactive dashboards in Power BI to visualize sales and customer data.</li>
+                        <li>Automated data collection processes, reducing reporting time by 30%.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Skills Section -->
+        <section id="skills" class="my-5">
+            <h2>Skills</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Data Science</h4>
+                    <ul>
+                        <li>Python, SQL</li>
+                        <li>Pandas, NumPy</li>
+                        <li>Matplotlib, Plotly</li>
+                        <li>Scikit-Learn</li>
+                        <li>TensorFlow, Keras</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Machine Learning</h4>
+                    <ul>
+                        <li>Supervised and Unsupervised Learning</li>
+                        <li>Deep Learning (Keras, TensorFlow)</li>
+                        <li>NLP (Natural Language Processing)</li>
+                        <li>Model Optimization (Optuna, GridSearchCV)</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Deployment</h4>
+                    <ul>
+                        <li>Flask, Streamlit</li>
+                        <li>Azure, Docker</li>
+                        <li>GitHub for CI/CD</li>
+                        <li>Jenkins for Continuous Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Personal Interests Section -->
+        <section id="interests" class="my-5">
+            <h2>Personal Interests</h2>
+            <p>Outside of my professional pursuits, I have a variety of hobbies and interests:</p>
+            <ul>
+                <li><strong>Traveling:</strong> I love exploring new places and cultures, which broadens my perspective and inspires creativity.</li>
+                <li><strong>Sports:</strong> I'm an avid soccer fan and enjoy playing whenever I get the chance.</li>
+                <li><strong>Reading:</strong> I am passionate about learning, and I often read books on data science, technology, and personal development.</li>
+                <li><strong>Cooking:</strong> I enjoy trying out new recipes and experimenting with different cuisines.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- Call to Action -->
+        <section id="cta" class="my-5 text-center">
+            <h2>Let's Work Together!</h2>
+            <p>If you have a project that you’d like to collaborate on, feel free to <a href="{{ url_for('contact') }}">reach out to me</a>. I'm always open to new opportunities and would love to hear from you.</p>
+        </section>
+    </div>
+{% endblock %}
