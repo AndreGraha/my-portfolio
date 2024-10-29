@@ -61,7 +61,9 @@
         <section id="projects" class="my-5">
             <h2>Recent Projects</h2>
             <div class="row">
-                <div class="col-md-6">
+
+                <!-- Heart Disease Prediction Project -->
+                <div class="col-md-6 d-flex align-items-stretch">
                     <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="card-title">Heart Disease Prediction</h5>
@@ -70,6 +72,29 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Hate Speech Detection Project -->
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Hate Speech Detection</h5>
+                            <p class="card-text">Automated hate speech detection using fine-tuned BERT model, highlighting skills in model tuning and hyperparameter optimization with Optuna.</p>
+                            <a href="{{ url_for('hate_speech_detection') }}" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Ethics Essay Project -->
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">AI Ethics: The Graham AI Ethical Framework</h5>
+                            <p class="card-text">A framework for ethical AI in financial trading, applying principles of Privacy, Transparency, Fairness, Accountability, and Autonomy.</p>
+                            <a href="{{ url_for('ai_ethics_essay') }}" class="btn btn-primary">Read Essay</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 

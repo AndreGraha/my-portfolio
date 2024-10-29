@@ -25,7 +25,26 @@
     /* Night Mode Toggle Variables */
     --toggle-background-color: #5f788a;
     --toggle-background-hover: #0056b3;
+
+     /* Default (Light Mode) Colors for Jupyter */
+     --jp-cell-editor-background: #ffffff;
+     --jp-cell-editor-active-background: #f3f3f3;
+     --jp-mirror-editor-variable-color: #333333;
+     --jp-mirror-editor-comment-color: #757575;
+     --jp-mirror-editor-keyword-color: #000080;
+     --jp-mirror-editor-operator-color: #333333;
+     --jp-mirror-editor-number-color: #007700;
+     --jp-mirror-editor-string-color: #dd1144;
+     --jp-mirror-editor-error-color: #ff0000;
+     --jp-scrollbar-thumb-color: 128, 128, 128; /* rgb values */
+     --jp-scrollbar-background-color: #f3f3f3;
+     --jp-layout-color1: #ffffff;
+     --jp-ui-font-color1: #333333;
+     --jp-border-color2: #e0e0e0;
+     --jp-border-width: 1px;
 }
+
+
 
 /* Dark Mode Variables */
 .dark-mode {
@@ -55,11 +74,94 @@
     /* Night Mode Toggle Variables */
     --toggle-background-color: #27597f;
     --toggle-background-hover: #2188b8;
+
+    /* Dark Mode Colors */
+    --jp-cell-editor-background: #2a2a2a;
+    --jp-cell-editor-active-background: #2a2a2a;
+    --jp-mirror-editor-variable-color: #e0e0e0;
+    --jp-mirror-editor-comment-color: #a0a0a0;
+    --jp-mirror-editor-keyword-color: #88c0d0;
+    --jp-mirror-editor-operator-color: #c0c0c0;
+    --jp-mirror-editor-number-color: #b5cea8;
+    --jp-mirror-editor-string-color: #ce9178;
+    --jp-mirror-editor-error-color: #ff6e6e;
+    --jp-scrollbar-thumb-color: 192, 192, 192; /* rgb values */
+    --jp-scrollbar-background-color: #2a2a2a;
+    --jp-layout-color1: #2a2a2a;
+    --jp-ui-font-color1: #d0d0d0;
+    --jp-border-color2: #2a2a2a;
+    --jp-border-width: 1px;
+    --jp-notebook-background: #2a2a2a;
+    --jp-cell-background: #2a2a2a;
+    --jp-output-area-background: #2a2a2a;
+    --jp-rendered-background: #2a2a2a;
+}
+
+/* Ensure all notebook cells and input areas have the same dark background */
+.dark-mode .jp-Cell, 
+.dark-mode .jp-InputArea, 
+.dark-mode .jp-OutputArea, 
+.dark-mode .jp-Cell-outputArea,
+.dark-mode .output_area, 
+.dark-mode .highlight pre, 
+.dark-mode .jp-RenderedHTMLCommon {
+    background-color: #2a2a2a !important; /* Consistent dark background */
+    color: #e0e0e0 !important; /* Light text for readability */
+}
+
+/* Remove dark borders and add consistent border color */
+.dark-mode .jp-Cell, 
+.dark-mode .jp-InputArea, 
+.dark-mode .jp-OutputArea, 
+.dark-mode .jp-Cell-outputWrapper, 
+.dark-mode .highlight pre {
+    border: 1px solid #2a2a2a !important; /* Subtle border color for dark mode */
+}
+
+/* Further refine text color in output cells */
+.dark-mode .output_subarea, 
+.dark-mode .output_area pre, 
+.dark-mode .jp-OutputArea-output {
+    color: #e0e0e0 !important; /* Ensure output text is light */
+}
+
+/* Background for notebook container and code cells in dark mode */
+.dark-mode .jp-Notebook, 
+.dark-mode .jp-Cell, 
+.dark-mode .highlight, 
+.dark-mode .jp-OutputArea,
+.dark-mode .jp-Cell-outputArea,
+.dark-mode .jp-RenderedHTMLCommon { 
+    background-color: #2a2a2a !important;
+    color: #e0e0e0 !important; /* General text color */
+}
+
+/* Ensure all content areas adopt the dark background */
+.dark-mode .output_area,
+.dark-mode pre,
+.dark-mode .jp-RenderedHTMLCommon {
+    background-color: #2a2a2a !important;
+}
+
+/* Ensure all output text, including print statement outputs, is light in dark mode */
+.dark-mode .output_area, 
+.dark-mode .output_subarea, 
+.dark-mode .output_text, 
+.dark-mode .output_html, 
+.dark-mode .text_output, 
+.dark-mode pre, /* Target <pre> blocks, often used for print outputs */
+.dark-mode .output_area pre {
+    color: #ffffff !important; /* White text for output areas */
+}
+
+/* Dark Mode */
+.icon {
+    filter: invert(1) brightness(0.8); /* Invert colors and reduce brightness */
 }
 
 /* Default Light Mode Styles */
 body {
-    background: var(--background-color);
+    background: var(--background-color) !important;
     color: var(--text-color);
     height: 100%;
     margin-top: 5rem;
