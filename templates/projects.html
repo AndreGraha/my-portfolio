@@ -17,5 +17,25 @@
 
         <hr>
         
+        <!-- Hate Speech Detection Project -->
+        <section id="hate-speech-detection" class="my-5">
+            <div class="project-item">
+                <h2>Hate Speech Detection</h2>
+                <p>This project addresses the critical need for automated hate speech detection, aiming to create safer and more inclusive online spaces. Using advanced machine learning techniques, I fine-tuned the BERT model specifically for hate speech classification. Through this approach, I utilized Optuna for hyperparameter optimization, which allowed me to enhance model accuracy and efficiency. I also froze the lower encoding layers of BERT, preserving its foundational understanding of natural language acquired during pre-training, while fine-tuning higher layers for the specific task of hate speech identification. This project highlights my expertise in model tuning, hyperparameter optimization, and leveraging transformer models for real-world applications.</p>
+                <a href="{{ url_for('hate_speech_detection') }}" class="btn btn-primary">View Work</a>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- AI Ethics Essay Project -->
+        <section id="ai-ethics-essay" class="my-5">
+            <div class="project-item">
+                <h2>AI Ethics: The Graham AI Ethical Framework</h2>
+                <p>This essay presents a comprehensive framework for ethical AI in high-stakes fields, applying five core principles—Privacy, Transparency, Fairness, Accountability, and Autonomy—to the use of AI tools in financial trading for pension funds. The framework provides actionable guidelines for responsibly managing sensitive data, ensuring transparency in AI-driven decisions, promoting fairness, and maintaining human oversight to safeguard public trust and regulatory compliance.</p>
+                <a href="{{ url_for('ai_ethics_essay') }}" class="btn btn-primary">Read Essay</a>
+            </div>
+        </section>
+
     </div>
 {% endblock %}

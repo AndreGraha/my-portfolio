@@ -24,6 +24,15 @@ def projects_page():
 def predicting_heart_disease():
     return render_template('projects/predicting_heart_disease.html',title='Predicting Heart Disease')
 
+@app.route("/projects/hate-speech-detection")
+def hate_speech_detection():
+    return render_template('projects/hate_speech_detection.html',title='Hate Speech Detection')
+
+@app.route("/projects/ai-ethics-essay")
+def ai_ethics_essay():
+    return render_template('projects/ai_ethics_essay.html', title='AI Ethics: The Graham AI Ethical Framework')
+
+
 
 
 if __name__ == "__main__":

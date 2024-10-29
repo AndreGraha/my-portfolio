@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <!-- Required meta tags -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,51 +19,80 @@
         <title>Andre Graham - My Portfolio</title>
     {% endif %}
 </head>
+<button id="dark-mode-toggle" class="btn btn-toggle">
+    <i class="fas fa-sun"></i> 
+    <i class="fas fa-moon"></i>
+</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.getElementById("dark-mode-toggle");
+            const rootElement = document.documentElement; // Using <html> element
+        
+            // Check if dark mode is enabled in local storage
+            if (localStorage.getItem("darkMode") === "enabled") {
+                rootElement.classList.add("dark-mode");
+            }
+        
+            // Toggle dark mode on button click
+            toggleButton.addEventListener("click", function() {
+                rootElement.classList.toggle("dark-mode");
+                // Save dark mode preference to local storage
+                if (rootElement.classList.contains("dark-mode")) {
+                    localStorage.setItem("darkMode", "enabled");
+                } else {
+                    localStorage.setItem("darkMode", "disabled");
+                }
+            });
+        });
+        
+    </script>
 <body>
-    <header class="site-header">
-        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-          <div class="container">
-            <a class="navbar-brand" href="/">My Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarToggle">
-              <!-- Left-aligned navigation links -->
-              <div class="navbar-nav me-auto">
-                <a class="nav-item nav-link" href="/projects">Projects</a>
-              </div>
-              <!-- Right-aligned navigation links with LinkedIn -->
-              <div class="navbar-nav ms-auto">
-                <a class="nav-item nav-link" href="/about">About</a>
-                <a class="nav-item nav-link" href="/contact">Contact</a>
-                <a class="nav-item nav-link" href="https://www.linkedin.com/in/andre-graham-45bb30320/" target="_blank">
-                  <img src="{{ url_for('static', filename='images/linkedin-logo.png') }}" alt="LinkedIn" style="width: 20px; height: 20px;">
-                </a>
+    <div class="content-wrapper">
+        <header class="site-header">
+            <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">My Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggle">
+                <!-- Left-aligned navigation links -->
+                <div class="navbar-nav me-auto">
+                    <a class="nav-item nav-link" href="/about">About</a>
+                    <a class="nav-item nav-link" href="/projects">Projects</a>
+                </div>
+                <!-- Right-aligned navigation links with LinkedIn -->
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-item nav-link" href="/contact">
+                        <img src="{{ url_for('static', filename='images/email-icon.png') }}" alt="Contact" style="width: 20px; height: 20px;">
+                    </a>
+                    <a class="nav-item nav-link" href="https://www.linkedin.com/in/andre-graham-45bb30320/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/linkedin-icon.png') }}" alt="LinkedIn" style="width: 18px; height: 18px;">
+                    </a>
 
-                <!-- GitHub Link with Icon -->
-                <a class="nav-item nav-link" href="https://github.com/AndreGraha" target="_blank">
-                   <img src="{{ url_for('static', filename='images/github-icon.png') }}" alt="GitHub" style="width: 20px; height: 20px;">
-                </a>
+                    <!-- GitHub Link with Icon -->
+                    <a class="nav-item nav-link" href="https://github.com/AndreGraha" target="_blank">
+                    <img src="{{ url_for('static', filename='images/github-icon.png') }}" alt="GitHub" style="width: 20px; height: 20px;">
+                    </a>
 
-              </div>
+                </div>
+                </div>
             </div>
-          </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
     
-    <main role="main" class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            {% block content %}{% endblock %}
-          </div>
-        </div>
-    </main>
-
+        <main role="main" class="container">
+            <div class="row justify-content-center">
+            <div class="col-md-8">
+                {% block content %}{% endblock %}
+            </div>
+            </div>
+        </main>
+    </div>
     <!-- Footer with LinkedIn link -->
-    <footer class="bg-light text-center py-3 mt-4">
+    <footer class="text-center py-3 mt-4">
         <p>&copy; 2024 Andre Graham | Connect on 
             <a href="https://www.linkedin.com/in/andre-graham-45bb30320/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/AndreGraha" target="_blank">GitHub</a>
         </p>
     </footer>
 
