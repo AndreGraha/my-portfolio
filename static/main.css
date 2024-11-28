@@ -297,3 +297,334 @@ a.article-title:hover {
 .dark-mode .btn-toggle .fa-moon {
     opacity: 1;
 }
+
+
+
+#skills h2 {
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#skills .card {
+    background-color: var(--card-background);
+    color: var(--card-text-color);
+    border: 1px solid var(--section-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#skills .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#skills .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+#skills ul {
+    padding: 0;
+    list-style: none;
+}
+
+#skills ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+#skills ul li i {
+    color: var(--link-hover-color);
+    transition: color 0.3s ease;
+}
+
+
+.dark-mode #skills h2 {
+    color: var(--heading-color);
+}
+
+.dark-mode #skills .card {
+    background-color: var(--card-background);
+    color: var(--card-text-color);
+    border: 1px solid var(--section-border);
+}
+
+.dark-mode #skills .card-title {
+    color: var(--heading-color);
+}
+
+.dark-mode #skills ul li i {
+    color: var(--link-hover-color);
+}
+
+/* Resume Page Specific Styles */
+#resume {
+    background-color: var(--section-background);
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#resume h1, 
+#resume h2, 
+#resume h4 {
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+#resume p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+#resume ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resume ul li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#resume ul li i {
+    color: var(--link-hover-color);
+}
+
+#resume .resume-section {
+    margin-bottom: 2rem;
+}
+
+#resume .resume-section h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--section-border);
+    padding-bottom: 0.5rem;
+}
+
+/* Resume Page Dark Mode Specific Styles */
+.dark-mode #resume {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    box-shadow: none;
+}
+
+.dark-mode #resume h1, 
+.dark-mode #resume h2, 
+.dark-mode #resume h4 {
+    color: #ffffff;
+}
+
+.dark-mode #resume p {
+    color: #d0d0d0;
+}
+
+.dark-mode #resume ul li i {
+    color: #7e7e7e;
+}
+
+.dark-mode #resume .resume-section h2 {
+    border-bottom-color: #444444;
+}
+
+/* Call to Action Section for Resume Page */
+#resume .cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#resume .cta a {
+    color: var(--button-text-color);
+    background-color: var(--button-background);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#resume .cta a:hover {
+    background-color: var(--button-background-hover);
+    color: #ffffff;
+}
+
+.dark-mode #resume .cta a {
+    background-color: #4096be;
+}
+
+.dark-mode #resume .cta a:hover {
+    background-color: #1a6f94;
+}
+
+
+/* Adjustments for Dark Mode Headings and Subtitles */
+.dark-mode #resume h1, 
+.dark-mode #resume h4 {
+    color: #5a9cff; /* Neutral light color for headings */
+}
+
+.dark-mode #resume p, 
+.dark-mode #resume ul li, 
+.dark-mode #resume .subtitle {
+    color: #cccccc; /* Slightly brighter gray for subtitles and regular text */
+}
+
+/* Specific Styling for Subtitles (Dates, GPAs, etc.) */
+#resume .subtitle {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--text-color); /* Default text color in light mode */
+}
+
+.dark-mode #resume .subtitle {
+    color: #cccccc; /* Adjusted gray for dark mode */
+}
+
+/* General Styles for Resume Titles */
+#resume h2 {
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--heading-color); /* Light mode default color */
+}
+
+/* Dark Mode Styles for Resume Titles */
+.dark-mode #resume h2 {
+    color: #eaeaea !important; /* Neutral light color in dark mode */
+}
+
+/* Override Bootstrap's .text-primary globally */
+.text-primary {
+    color: var(--heading-color) !important; /* Replace with your desired color */
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .text-primary {
+    color: #eaeaea !important; /* Replace with your desired dark mode color */
+}
+
+
+/* Light Mode */
+.text-muted {
+    color: #6c757d !important; /* Default muted color for light mode */
+}
+
+/* Dark Mode */
+.dark-mode .text-muted {
+    color: #b0b0b0 !important; /* Brighter muted color for dark mode */
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: var(--section-background);
+    border-radius: 8px;
+    border: 1px solid var(--section-border);
+    padding: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu .dropdown-item {
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: var(--button-background-hover);
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+/* Dark Mode Dropdown Styling */
+.dark-mode .dropdown-menu {
+    background-color: #2a2a2a;
+    border: 1px solid var(--section-border);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .dropdown-menu .dropdown-item {
+    color: var(--text-color);
+}
+
+.dark-mode .dropdown-menu .dropdown-item:hover {
+    background-color: var(--toggle-background-hover);
+    color: #ffffff;
+}
+/* Timeline Layout */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+    border-left: 3px solid var(--section-border);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background: var(--button-background);
+    border: 2px solid var(--section-border);
+    border-radius: 50%;
+}
+
+.timeline-date {
+    position: absolute;
+    left: -10rem;
+    width: 8rem;
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.timeline-content h4 {
+    color: var(--heading-color);
+}
+
+.timeline-content p,
+.timeline-content ul {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .timeline-date {
+        position: relative;
+        left: 0;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+    .timeline-item {
+        padding-left: 1rem;
+    }
+    .timeline {
+        border-left: none;
+    }
+}

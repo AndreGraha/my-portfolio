@@ -14,7 +14,7 @@
                     <p>Hello! I'm Andre Graham, a data scientist and AI enthusiast with a passion for solving real-world problems using machine learning and deep learning techniques. I enjoy working on projects that involve data analysis, predictive modeling, and application deployment. I completed my Bachelor of Science from the University of Toronto, majoring in Statistics and Economics and graduating with distinction. I am currently completing a graduate certificate from George Brown College in A.I. Solutions Development.</p>
                 </div>
                 <div class="col-md-6">
-                    <img src="{{ url_for('static', filename='images/profile_picture.jpeg') }}" alt="Profile Picture" class="img-fluid rounded">
+                    <img src="{{ url_for('static', filename='images/traveling_picture.jpeg') }}" alt="Profile Picture" class="img-fluid rounded">
                 </div>
             </div>
         </section>
@@ -23,34 +23,51 @@
 
         <!-- Skills Section -->
         <section id="skills" class="my-5">
-            <h2>Skills</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <h4>Data Science</h4>
-                    <ul>
-                        <li>Python, SQL</li>
-                        <li>Pandas, NumPy</li>
-                        <li>Matplotlib, Plotly</li>
-                        <li>Scikit-Learn</li>
-                        <li>TensorFlow, Keras</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4>Machine Learning</h4>
-                    <ul>
-                        <li>Supervised and Unsupervised Learning</li>
-                        <li>Deep Learning (Keras, TensorFlow)</li>
-                        <li>NLP (Natural Language Processing)</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4>Deployment</h4>
-                    <ul>
-                        <li>Flask, Streamlit</li>
-                        <li>Azure, Docker</li>
-                        <li>GitHub for CI/CD</li>
-                        <li>Render for Hosting</li>
-                    </ul>
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="row">
+                    <!-- Data Science Column -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Data Science</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Python, SQL</li>
+                                    <li><i class="fas fa-check-circle"></i> Pandas, NumPy</li>
+                                    <li><i class="fas fa-check-circle"></i> Matplotlib, Plotly</li>
+                                    <li><i class="fas fa-check-circle"></i> Scikit-Learn</li>
+                                    <li><i class="fas fa-check-circle"></i> TensorFlow, Keras</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Machine Learning Column -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Machine Learning</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Supervised and Unsupervised Learning</li>
+                                    <li><i class="fas fa-check-circle"></i> Deep Learning (Keras, TensorFlow)</li>
+                                    <li><i class="fas fa-check-circle"></i> NLP (Natural Language Processing)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Deployment Column -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Deployment</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> Flask, Streamlit</li>
+                                    <li><i class="fas fa-check-circle"></i> Azure, Docker</li>
+                                    <li><i class="fas fa-check-circle"></i> GitHub for CI/CD</li>
+                                    <li><i class="fas fa-check-circle"></i> Render for Hosting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -59,7 +76,7 @@
 
         <!-- Recent Projects Section -->
         <section id="projects" class="my-5">
-            <h2>Recent Projects</h2>
+            <h2 class="text-center mb-4">Recent Projects</h2>
             <div class="row">
 
                 <!-- Heart Disease Prediction Project -->

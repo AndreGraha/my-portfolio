@@ -2,45 +2,43 @@
 <html lang="en">
 <head>
     <!-- Required meta tags -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Theme color for iOS Safari and Android Chrome -->
     <meta name="theme-color" content="#5f788a" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#27597f" media="(prefers-color-scheme: dark)">
 
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <!-- Bootstrap and Font Awesome CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='images/website_logo.png') }}" type="image/x-icon">
 
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main.css') }}">
+    <!-- Page Title -->
     {% if title %}
         <title>Andre Graham - {{ title }}</title>
     {% else %}
         <title>Andre Graham - My Portfolio</title>
     {% endif %}
 </head>
-<button id="dark-mode-toggle" class="btn btn-toggle">
-    <i class="fas fa-sun"></i> 
-    <i class="fas fa-moon"></i>
-</button>
+<body>
+    <button id="dark-mode-toggle" class="btn btn-toggle">
+        <i class="fas fa-sun"></i> 
+        <i class="fas fa-moon"></i>
+    </button>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const toggleButton = document.getElementById("dark-mode-toggle");
-            const rootElement = document.documentElement; // Using <html> element
-        
-            // Check if dark mode is enabled in local storage
+            const rootElement = document.documentElement;
+
             if (localStorage.getItem("darkMode") === "enabled") {
                 rootElement.classList.add("dark-mode");
             }
-        
-            // Toggle dark mode on button click
+
             toggleButton.addEventListener("click", function() {
                 rootElement.classList.toggle("dark-mode");
-                // Save dark mode preference to local storage
                 if (rootElement.classList.contains("dark-mode")) {
                     localStorage.setItem("darkMode", "enabled");
                 } else {
@@ -48,59 +46,79 @@
                 }
             });
         });
-        
     </script>
-<body>
-    <div class="content-wrapper">
-        <header class="site-header">
-            <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md fixed-top shadow bg-steel">
             <div class="container">
-                <a class="navbar-brand" href="/">My Portfolio</a>
+                <!-- Branding -->
+                <a class="navbar-brand fw-bold text-light" href="/">
+                    Andre Graham
+                </a>
+    
+                <!-- Toggle Button for Mobile View -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
+    
+                <!-- Navigation Links -->
                 <div class="collapse navbar-collapse" id="navbarToggle">
-                <!-- Left-aligned navigation links -->
-                <div class="navbar-nav me-auto">
-                    <a class="nav-item nav-link" href="/about">About</a>
-                    <a class="nav-item nav-link" href="/projects">Projects</a>
-                </div>
-                <!-- Right-aligned navigation links with LinkedIn -->
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-item nav-link" href="/contact">
-                        <img src="{{ url_for('static', filename='images/email-icon.png') }}" class = "icon" alt="Icon" style="width: 20px; height: 20px;">
-                    </a>
-                    <a class="nav-item nav-link" href="https://www.linkedin.com/in/andre-graham-45bb30320/" target="_blank">
-                    <img src="{{ url_for('static', filename='images/linkedin-icon.png') }}" class = "icon" alt="LinkedIn" style="width: 18px; height: 18px;">
-                    </a>
-
-                    <!-- GitHub Link with Icon -->
-                    <a class="nav-item nav-link" href="https://github.com/AndreGraha" target="_blank">
-                    <img src="{{ url_for('static', filename='images/github-icon.png') }}" class = "icon" alt="GitHub" style="width: 20px; height: 20px;">
-                    </a>
-
-                </div>
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="/about">Resume</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Projects
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="projectsDropdown">
+                                <li><a class="dropdown-item" href="/projects"><i class="fas fa-home me-2"></i>Overview</a></li>
+                                <li><a class="dropdown-item" href="/projects/hate-speech-detection"><i class="fas fa-comment-slash me-2"></i>Hate Speech Detection</a></li>
+                                <li><a class="dropdown-item" href="/projects/ai-ethics-essay"><i class="fas fa-balance-scale me-2"></i>AI Ethics</a></li>
+                                <li><a class="dropdown-item" href="/projects/predicting-heart-disease"><i class="fas fa-heartbeat me-2"></i>Predicting Heart Disease</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+    
+                    <!-- Social Icons -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">
+                                <i class="fas fa-envelope fa-lg text-light"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com/in/andre-graham-45bb30320/" target="_blank">
+                                <i class="fab fa-linkedin fa-lg text-light"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/AndreGraha" target="_blank">
+                                <i class="fab fa-github fa-lg text-light"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            </nav>
-        </header>
+        </nav>
+    </header>
     
-        <main role="main" class="container">
-            <div class="row justify-content-center">
+
+    <main role="main" class="container">
+        <div class="row justify-content-center">
             <div class="col-md-8">
                 {% block content %}{% endblock %}
             </div>
-            </div>
-        </main>
-    </div>
-    <!-- Footer with LinkedIn link -->
+        </div>
+    </main>
+
     <footer class="text-center py-3 mt-4">
         <p>&copy; 2024 Andre Graham | Connect on 
             <a href="https://www.linkedin.com/in/andre-graham-45bb30320/" target="_blank">LinkedIn</a>
         </p>
     </footer>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>

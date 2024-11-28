@@ -1,124 +1,157 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="container my-5">
-        <h1 class="text-center mb-4">About Me</h1>
-        <p class="text-center"> Learn more about my journey, skills, and passion for data science. This section covers my professional background, technical expertise, and the drive behind my projects. </p>
-        <hr>
-        <!-- Introduction Section -->
-        <section id="introduction" class="my-5">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Who Am I?</h2>
-                    <p>Hello! I'm Andre Graham, a passionate data scientist and AI enthusiast. My journey into the world of data began with a love for mathematics and problem-solving, leading me to pursue an academic path in Statistics and Economics. I thrive on challenges and enjoy applying my skills to real-world problems, especially in the realms of machine learning, data analysis, and predictive modeling.</p>
-                    <p>Currently, I'm focused on leveraging AI and data-driven insights to solve complex problems and create impactful solutions.</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="{{ url_for('static', filename='images/traveling_picture.jpeg') }}" alt="Profile Picture" class="img-fluid rounded">
-                </div>
+<div class="container my-5">
+    <!-- Header Section -->
+    <header class="text-center mb-5">
+        <h1 class="display-4 fw-bold mb-3">Andre Graham</h1>
+        <p class="text-muted">
+            Toronto, ON M8X1L5 | 
+            <a href="mailto:andre.graham@georgebrown.ca" class="text-decoration-none">andre.graham@georgebrown.ca</a>
+        </p>
+    </header>
+    <hr class="my-4">
+
+    <!-- Objective Section -->
+    <section id="objective" class="my-5">
+        <h2 class="text-center text-primary fw-bold mb-4">Objective</h2>
+        <p class="lead text-center">
+            Data science student eager to leverage a strong background in data analytics, technical skills, and collaborative experience 
+            to contribute to impactful projects in data science and technology. Passionate about meaningful work that combines 
+            data-driven insights with real-world applications.
+        </p>
+    </section>
+    <hr class="my-4">
+
+    <!-- Qualifications Section -->
+    <section id="qualifications" class="my-5">
+        <h2 class="text-center text-primary fw-bold mb-4">Qualifications</h2>
+        <ul class="list-unstyled">
+            <li><i class="fas fa-check-circle text-success"></i> Proficient in Python (Pandas, NumPy) and SQL for data cleaning, manipulation, and predictive analysis.</li>
+            <li><i class="fas fa-check-circle text-success"></i> Experienced in developing and optimizing machine learning models, including Decision Trees and XGBoost.</li>
+            <li><i class="fas fa-check-circle text-success"></i> Skilled in data visualization tools such as Tableau, Power BI, and Matplotlib.</li>
+            <li><i class="fas fa-check-circle text-success"></i> Adept at cleaning and transforming data from various formats (CSV, JSON, SQL) for business insights.</li>
+            <li><i class="fas fa-check-circle text-success"></i> Effective communicator and collaborative team member, demonstrated through professional and academic experiences.</li>
+        </ul>
+    </section>
+    <hr class="my-4">
+
+    <!-- Technical Skills Section -->
+    <section id="technical-skills" class="my-5">
+        <h2 class="text-center text-primary fw-bold mb-4">Technical Skills</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h4 class="fw-bold">Data Analytics Tools</h4>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-tools text-secondary"></i> Python, R, SQL</li>
+                    <li><i class="fas fa-tools text-secondary"></i> Pandas, NumPy</li>
+                    <li><i class="fas fa-tools text-secondary"></i> Tableau, Power BI</li>
+                </ul>
             </div>
-        </section>
-
-        <hr>
-
-        <!-- Education Section -->
-        <section id="education" class="my-5">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <strong>Graduate Certificate in A.I. Solutions Development</strong> - George Brown College
-                    <p>Currently completing a specialized program focused on artificial intelligence solutions development. This program covers machine learning, deep learning, natural language processing, and project deployment in the industry.</p>
-                </li>
-                <li>
-                    <strong>Bachelor of Science in Statistics and Economics</strong> - University of Toronto
-                    <p>Graduated with distinction, majoring in Statistics and Economics. The coursework provided a strong foundation in statistical analysis, econometrics, and data-driven decision-making. I developed a keen interest in predictive modeling and data visualization during my time here.</p>
-                </li>
-            </ul>
-        </section>
-
-        <hr>
-
-        <!-- Professional Experience Section -->
-        <section id="experience" class="my-5">
-            <h2>Professional Experience</h2>
-            <div class="row">
-                <div class="col-md-12">
-                    <h4>Data Science Intern - XYZ Company</h4>
-                    <p><em>May 2024 - August 2024</em></p>
-                    <ul>
-                        <li>Developed machine learning models to predict customer churn, increasing retention by 15%.</li>
-                        <li>Conducted exploratory data analysis (EDA) and feature engineering for various projects.</li>
-                        <li>Collaborated with the data engineering team to implement data pipelines using Python and SQL.</li>
-                    </ul>
-                </div>
-                <div class="col-md-12 mt-4">
-                    <h4>Junior Data Analyst - ABC Inc.</h4>
-                    <p><em>June 2023 - December 2023</em></p>
-                    <ul>
-                        <li>Performed data analysis to support business decisions, identifying key insights for marketing campaigns.</li>
-                        <li>Built interactive dashboards in Power BI to visualize sales and customer data.</li>
-                        <li>Automated data collection processes, reducing reporting time by 30%.</li>
-                    </ul>
-                </div>
+            <div class="col-md-4">
+                <h4 class="fw-bold">Machine Learning</h4>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-robot text-secondary"></i> Random Forest, XGBoost</li>
+                    <li><i class="fas fa-robot text-secondary"></i> Linear and Logistic Regression</li>
+                    <li><i class="fas fa-robot text-secondary"></i> SVM, K-Means Clustering</li>
+                </ul>
             </div>
-        </section>
+            <div class="col-md-4">
+                <h4 class="fw-bold">Software & Platforms</h4>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-laptop-code text-secondary"></i> Jupyter Notebooks, Google Colab</li>
+                    <li><i class="fas fa-laptop-code text-secondary"></i> GitHub, Azure, Docker</li>
+                    <li><i class="fas fa-database text-secondary"></i> MySQL, Microsoft SQL Server</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <hr class="my-4">
 
-        <hr>
-
-        <!-- Skills Section -->
-        <section id="skills" class="my-5">
-            <h2>Skills</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <h4>Data Science</h4>
-                    <ul>
-                        <li>Python, SQL</li>
-                        <li>Pandas, NumPy</li>
-                        <li>Matplotlib, Plotly</li>
-                        <li>Scikit-Learn</li>
-                        <li>TensorFlow, Keras</li>
-                    </ul>
+    <section id="experience" class="my-5">
+        <h2 class="text-center text-primary fw-bold mb-4">Professional Experience</h2>
+        <div class="timeline">
+            <!-- Job 1 -->
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <p class="text-muted fw-bold">May 2023 - August 2023</p>
                 </div>
-                <div class="col-md-4">
-                    <h4>Machine Learning</h4>
-                    <ul>
-                        <li>Supervised and Unsupervised Learning</li>
-                        <li>Deep Learning (Keras, TensorFlow)</li>
-                        <li>NLP (Natural Language Processing)</li>
-                        <li>Model Optimization (Optuna, GridSearchCV)</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h4>Deployment</h4>
-                    <ul>
-                        <li>Flask, Streamlit</li>
-                        <li>Azure, Docker</li>
-                        <li>GitHub for CI/CD</li>
-                        <li>Render for Hosting/Deployment</li>
+                <div class="timeline-content">
+                    <h4 class="fw-bold">Senior Instructor</h4>
+                    <p class="text-muted"><strong>University of Toronto</strong></p>
+                    <ul class="list-unstyled">
+                        <li>Led administrative tasks, scheduling, and programming for summer camps.</li>
+                        <li>Provided real-time customer support and adapted programming to client needs.</li>
+                        <li>Fostered a positive team environment and solved dynamic challenges among staff.</li>
                     </ul>
                 </div>
             </div>
-        </section>
+            <!-- Job 2 -->
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <p class="text-muted fw-bold">May 2022 - August 2022</p>
+                </div>
+                <div class="timeline-content">
+                    <h4 class="fw-bold">Camp U of T Instructor</h4>
+                    <p class="text-muted"><strong>University of Toronto</strong></p>
+                    <ul class="list-unstyled">
+                        <li>Facilitated engaging, inclusive activities for both staff and campers.</li>
+                        <li>Adapted to evolving staffing challenges due to the COVID-19 pandemic.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Job 3 -->
+            <div class="timeline-item">
+                <div class="timeline-date">
+                    <p class="text-muted fw-bold">May 2021 - August 2021</p>
+                </div>
+                <div class="timeline-content">
+                    <h4 class="fw-bold">Painting/Staining Team Member</h4>
+                    <p class="text-muted"><strong>Student Works Painting</strong></p>
+                    <ul class="list-unstyled">
+                        <li>Delivered high-quality work under tight deadlines in a fast-paced environment.</li>
+                        <li>Adapted quickly to new challenges and contributed to team success.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <hr class="my-4">
 
-        <hr>
+    <!-- Personal Projects Section -->
+    <section id="projects" class="my-5">
+        <h2 class="text-center text-primary fw-bold mb-4">Personal Projects</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h5 class="fw-bold">Stock Sentiment Analysis</h5>
+                <p class="text-muted">Developed a Streamlit app leveraging OpenAI's API for live stock sentiment analysis.</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="fw-bold">Image Summarizer</h5>
+                <p class="text-muted">Built an app to summarize text from images using OpenAI’s API and prompt engineering.</p>
+            </div>
+            <div class="col-md-4">
+                <h5 class="fw-bold">JungChat Bot</h5>
+                <p class="text-muted">Designed a chatbot using RAG architecture to answer questions based on Carl Jung’s works.</p>
+            </div>
+        </div>
+    </section>
+    <hr class="my-4">
 
-        <!-- Personal Interests Section -->
-        <section id="interests" class="my-5">
-            <h2>Personal Interests</h2>
-            <p>Outside of my professional pursuits, I have a variety of hobbies and interests:</p>
-            <ul>
-                <li><strong>Traveling:</strong> I love exploring new places and cultures, which broadens my perspective and inspires creativity.</li>
-                <li><strong>Sports:</strong> I'm an avid soccer fan and enjoy playing whenever I get the chance.</li>
-                <li><strong>Reading:</strong> I am passionate about learning, and I often read books on data science, technology, and personal development.</li>
-                <li><strong>Cooking:</strong> I enjoy trying out new recipes and experimenting with different cuisines.</li>
-            </ul>
-        </section>
+    <!-- Interests Section -->
+    <section id="interests" class="my-5">
+        <h2 class="text-center text-primary fw-bold mb-4">Interests</h2>
+        <ul class="list-unstyled text-center">
+            <li><i class="fas fa-futbol text-secondary"></i> Playing and watching soccer and basketball.</li>
+            <li><i class="fas fa-guitar text-secondary"></i> Playing guitar and composing music.</li>
+            <li><i class="fas fa-brain text-secondary"></i> Exploring the latest advancements in artificial intelligence.</li>
+        </ul>
+    </section>
+    <hr class="my-4">
 
-        <hr>
-
-        <!-- Call to Action -->
-        <section id="cta" class="my-5 text-center">
-            <h2>Let's Work Together!</h2>
-            <p>If you have a project that you’d like to collaborate on, feel free to <a href="{{ url_for('contact') }}">reach out to me</a>. I'm always open to new opportunities and would love to hear from you.</p>
-        </section>
-    </div>
+    <!-- Call to Action Section -->
+    <section id="cta" class="my-5 text-center">
+        <h2 class="display-6 fw-bold text-primary mb-4">Let’s Collaborate!</h2>
+        <p class="lead">If you’d like to collaborate or discuss an opportunity, feel free to <a href="{{ url_for('contact') }}" class="text-decoration-none">get in touch</a>.</p>
+    </section>
+</div>
 {% endblock %}
